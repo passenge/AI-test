@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 使用者等级测评</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card" id="introCard">
+        <h1>AI 使用者等级测评</h1>
+        <p class="sub">适合 AI 小白和新手，3-5 分钟完成。</p>
+        <ul class="tips">
+          <li>共 10 题，覆盖 5 个能力维度。</li>
+          <li>每题 1-5 分，系统自动计算总分并评级。</li>
+          <li>评级结果：初级 / 初中级 / 中级 / 中高级 / 高级。</li>
+        </ul>
+        <button id="startBtn" class="btn primary">开始测试</button>
+      </section>
+
+      <section class="card hidden" id="quizCard">
+        <header class="quiz-header">
+          <h2 id="questionTitle">题目</h2>
+          <span id="progress">1 / 10</span>
+        </header>
+        <p id="dimension" class="dimension"></p>
+        <div id="options" class="options"></div>
+        <div class="actions">
+          <button id="prevBtn" class="btn">上一题</button>
+          <button id="nextBtn" class="btn primary">下一题</button>
+        </div>
+      </section>
+
+      <section class="card hidden" id="resultCard">
+        <h2>你的 AI 使用等级</h2>
+        <p class="score">总分：<strong id="totalScore">0</strong> / 50</p>
+        <p class="level" id="levelName">中级</p>
+        <p class="desc" id="levelDesc"></p>
+
+        <div class="grid">
+          <article class="box">
+            <h3>维度得分</h3>
+            <ul id="dimensionScores"></ul>
+          </article>
+          <article class="box">
+            <h3>下一步建议</h3>
+            <ul id="suggestions"></ul>
+          </article>
+        </div>
+
+        <div class="actions">
+          <button id="restartBtn" class="btn">重新测试</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
